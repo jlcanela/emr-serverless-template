@@ -1,0 +1,4 @@
+.dccache
+.history
+/bin/
+/node_modules/
