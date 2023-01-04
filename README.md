@@ -2,11 +2,8 @@
 
 Sample pulumi project to deploy an EMR serverless to AWS
 
-## Workflows
+**CAUTION: please keep emr-serverless automatic provisionning private by default**
 
-Pull request on branch "main" triggers a pulumi preview
-Pull request completed on branch "main" triggers a pulumi up
- 
 ## Provision the project
 
 Fetch dependencies and then use pulumi up command: 
@@ -20,6 +17,20 @@ pulumi up
 ```
 spark-submit s3://deployment-dev-xxxxxxx/jobs/sample-job-assembly-1.0.jar s3://data-dev-xxxxxxx/in/sample.csv s3://data-dev-xxxxxxx/out/sample-json 
 ```
+
+## Configure the secrets for Workflows 
+
+Setup the following repository secrets: 
+* AWS_ACCESS_KEY_ID
+* AWS_REGION
+* AWS_SECRET_ACCESS_KEY
+* PULUMI_ACCESS_TOKEN
+
+## Workflows
+
+Pull request on branch "main" triggers a pulumi preview
+Pull request completed on branch "main" triggers a pulumi up
+
 
 ## Troubleshooting
 
